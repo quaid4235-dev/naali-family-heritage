@@ -5,559 +5,166 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Usamat &amp; Hauwa Naali — A Family of Keana</title>
 <meta name="description" content="The heritage and story of the Naali family of Keana, Nasarawa State — Alhaji Usamat Aliyu Naali, Hajiya Hauwa Jibrin Sahara, and their six children.">
-<meta name="theme-color" content="#0E2523">
+<meta name="theme-color" content="#0b5ea8">
 <meta property="og:title" content="Usamat & Hauwa Naali — A Family of Keana">
-<meta property="og:description" content="The story of a family from Keana, Nasarawa State, and the six children who carry it forward.">
-<meta property="og:image" content="images/family.jpg">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230E2523'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%23A98550' font-family='serif'>N</text></svg>">
+<meta property="og:image" content="https://naali-family-heritage.vercel.app/images/family.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
-<div class="progress" id="pg" aria-hidden="true"></div>
 
-<header id="hd"><div class="wrap bar">
-  <a class="logo" href="#top">Naali</a>
-  <button class="burger" id="bg" aria-expanded="false" aria-controls="menu">Menu</button>
-  <nav aria-label="Main"><ul id="menu">
+<header><div class="wrap bar">
+  <a class="logo" href="#top">Naa<i>l</i>i</a>
+  <button class="burger" id="bg" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main"><ul>
+    <li><a href="#top" class="on">Home</a></li>
     <li><a href="#heritage">Heritage</a></li>
     <li><a href="#parents">Parents</a></li>
     <li><a href="#tree">Family tree</a></li>
     <li><a href="#children">The children</a></li>
-    <li><a href="#values">Values</a></li>auto;
-      }
-      .tree-children {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 36px 20px;
-        position: relative;
-        padding-top: 36px;
-        border-top: 1px solid rgba(244,239,228,0.3);
-      }
-      @media (min-width: 640px) { .tree-children { grid-template-columns: repeat(3, 1fr); } }
-      @media (min-width: 1000px) { .tree-children { grid-template-columns: repeat(6, 1fr); } }
-      .tree-child { text-align: center; font-size: 0.92rem; }
-      .tree-child .pos {
-        display: block;
-        font-size: 0.72rem;
-        letter-spacing: 0.05em;
-        color: var(--gold);
-        margin-bottom: 6px;
-      }
-      .tree-child .nm { font-family: 'Fraunces', serif; font-size: 1.05rem; }
+    <li><a href="#values">Values</a></li>
+  </ul></nav>
+</div></header>
 
-      .children-section { background: var(--paper); }
-      .child-row {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 28px;
-        padding: clamp(40px, 6vw, 64px) 0;
-        border-bottom: 1px solid var(--line);
-        align-items: center;
-      }
-      .child-row:first-of-type { border-top: 1px solid var(--line); }
-      @media (min-width: 780px) {
-        .child-row { grid-template-columns: 0.62fr 1fr; gap: 56px; }
-        .child-row.alt { grid-template-columns: 1fr 0.62fr; }
-        .child-row.alt .child-photo { order: 2; }
-      }
-      .child-photo {
-        overflow: hidden;
-        aspect-ratio: 3/4;
-        max-width: 340px;
-        background: linear-gradient(145deg, var(--green) 0%, var(--green-deep) 100%);
-      }
-      .child-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 1s cubic-bezier(.2,.7,.3,1);
-      }
-      .child-photo:hover img { transform: scale(1.04); }
-      .child-order {
-        color: var(--gold);
-        font-size: 0.82rem;
-        letter-spacing: 0.04em;
-      }
-      .child-name {
-        font-family: 'Fraunces', serif;
-        font-size: clamp(1.5rem, 3vw, 2.1rem);
-        margin-top: 8px;
-      }
-      .child-role {
-        color: rgba(33,29,25,0.55);
-        font-size: 0.95rem;
-        margin-top: 4px;
-        margin-bottom: 20px;
-      }
-      .child-meta { margin-top: 18px; }
-      .child-meta h4 {
-        font-size: 0.78rem;
-        letter-spacing: 0.04em;
-        color: var(--green);
-        margin-bottom: 8px;
-        font-weight: 600;
-      }
-      .child-meta ul { list-style: none; padding: 0; margin: 0; }
-      .child-meta li {
-        position: relative;
-        padding-left: 16px;
-        color: rgba(33,29,25,0.82);
-        margin-bottom: 5px;
-      }
-      .child-meta li::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0.6em;
-        width: 5px;
-        height: 1px;
-        background: var(--gold);
-      }
-      .child-work {
-        margin-top: 16px;
-        padding-top: 16px;
-        border-top: 1px solid var(--line);
-        font-size: 0.98rem;
-      }
-      .child-work b { color: var(--green); }
-
-      .values-section { background: var(--green); }
-      .values-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0;
-        margin-top: 56px;
-      }
-      @media (min-width: 780px) { .values-grid { grid-template-columns: 1fr 1fr; } }
-      .value-card {
-        padding: 40px 0;
-        border-top: 1px solid rgba(244,239,228,0.25);
-      }
-      @media (min-width: 780px) {
-        .value-card {
-          padding: 48px 56px;
-        }
-        .value-card:nth-child(odd) { border-right: 1px solid rgba(244,239,228,0.25); }
-      }
-      .value-card h3 {
-        font-family: 'Fraunces', serif;
-        color: var(--paper);
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin: 0;
-      }
-      .value-card p {
-        color: rgba(244,239,228,0.78);
-        margin-top: 12px;
-        max-width: 44ch;
-      }
-      .values-section .kicker { color: var(--gold); }
-      .values-section h2 { color: var(--paper); }
-      .values-section .lede { color: rgba(244,239,228,0.75); }
-
-      .keana {
-        background: var(--clay);
-        color: var(--paper);
-        text-align: center;
-      }
-      .keana .wrap { max-width: 760px; }
-      .keana .kicker { text-align: center; }
-      .keana h2 { color: var(--paper); margin: 0 auto; text-align: center; }
-      .keana p {
-        color: rgba(244,239,228,0.86);
-        max-width: 56ch;
-        margin: 22px auto 0;
-        text-align: center;
-        font-size: 1.08rem;
-      }
-      .keana .rule { margin: 30px auto; }
-
-      footer {
-        background: var(--green-deep);
-        color: rgba(244,239,228,0.65);
-        padding: 48px 0 40px;
-      }
-      footer .wrap {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-      }
-      .fname {
-        font-family: 'Fraunces', serif;
-        color: var(--paper);
-        font-size: 1.1rem;
-        margin-bottom: 8px;
-      }
-      .meeting { margin-top: 10px; font-size: 0.85rem; color: rgba(244,239,228,0.5); }
-    </style>
-  </head>
-  <body>
-    <nav id="siteNav">
-      <div class="wrap">
-        <a href="#top" class="brandmark">Usamat &amp; Hauwa</a>
-        <div class="navlinks">
-          <a href="#heritage">Heritage</a>
-          <a href="#parents">Parents</a>
-          <a href="#tree">Family Tree</a>
-          <a href="#children">The Children</a>
-          <a href="#values">Values</a>
-        </div>
-        <button class="menu-btn" id="openMenu" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
-      </div>
-    </nav>
-
-    <div id="mobileMenu">
-      <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
-      <a href="#heritage">Heritage</a>
-      <a href="#parents">Parents</a>
-      <a href="#tree">Family Tree</a>
-      <a href="#children">The Children</a>
-      <a href="#values">Values</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="blob b-green" style="width:300px;height:300px;left:-120px;top:420px;opacity:.55"></div>
+  <div class="wrap">
+    <div>
+      <h1>A Family<br>of <b>Keana</b></h1>
+      <small>Usamat &amp; Hauwa Naali and their six children  Nasarawa State, Nigeria.</small>
+      <a class="btn blue" href="#heritage">Read our story</a>
     </div>
+    <div class="media">
+      <div class="blob b-blue" style="width:75%;height:75%;right:-8%;top:-10%"></div>
+      <div class="pic"><img src="images/family.jpg" alt="The Naali family together"></div>
+      <a class="play" href="#moments" aria-label="See family moments"></a>
+    </div>
+  </div>
+</section>
 
-    <header class="hero" id="top">
-      <img
-        class="hero-img"
-        alt="The Naali family together"
-        src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80"
-      />
-      <div class="hero-content wrap">
-        <span class="hero-eyebrow">Keana, Nasarawa State, Nigeria</span>
-        <h1 class="serif">Usamat &amp; Hauwa Naali</h1>
-        <p>
-          The story of a family from Keana — its parents, its six children, and the ties of
-          respect and togetherness that hold them together.
-        </p>
+<!-- HERITAGE -->
+<section id="heritage" style="padding-top:40px">
+  <div class="wrap row">
+    <div class="window reveal">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <h4>The Naali family at a glance</h4>
+      <div class="stats">
+        <div class="stat"><b>8</b><span>Members of the household</span></div>
+        <div class="stat"><b>6</b><span>Childrenthree sons, three daughters</span></div>
+        <div class="stat"><b>1</b><span>Family, gathered each Eid</span></div>
       </div>
-      <div class="scroll-cue" aria-hidden="true"><span></span></div>
-    </header>
+    </div>
+    <div class="reveal">
+      <h2>Where the family <b>comes from</b></h2>
+      <p>The Naali family belongs to Keana Local Government Area in Nasarawa State, a place the family describes as blessed with the salt-production heritage of their ancestors.</p>
+      <p>Alhaji Usamat Aliyu Naali and Hajiya Hauwa Jibrin Sahara are at the center of a home shaped by faith, education, respect, and togetherness.</p>
+      <a class="btn" href="#parents">Meet the parents</a>
+    </div>
+  </div>
+</section>
 
-    <section class="heritage section-pad" id="heritage">
-      <div class="wrap heritage-grid">
-        <div class="reveal">
-          <span class="kicker">Where the family comes from</span>
-          <h2 class="serif">A home built on Keana's ground</h2>
-        </div>
-        <div class="reveal">
-          <p class="lede">
-            The Naali family belongs to Keana Local Government Area in Nasarawa State, a place
-            the family describes as blessed with the salt-production heritage of their ancestors.
-            Alhaji Usamat Aliyu Naali and Hajiya Hauwa Jibrin Sahara are at the center of a home
-            shaped by faith, education, respect, and togetherness.
-          </p>
-          <div class="rule"></div>
-          <div class="heritage-figures">
-            <div class="figure-stat"><b>8</b><span>Members of the household</span></div>
-            <div class="figure-stat"><b>6</b><span>Children — three sons, three daughters</span></div>
-            <div class="figure-stat"><b>1</b><span>Family, gathered each Eid</span></div>
-          </div>
-        </div>
+<!-- PARENTS -->
+<section id="parents" class="soft">
+  <div class="blob b-blue" style="width:260px;height:260px;right:-100px;top:60px;opacity:.5"></div>
+  <div class="wrap">
+    <div class="row reveal">
+      <div class="media"><div class="blob b-green" style="width:70%;height:70%;left:2%;bottom:0"></div>
+        <div class="pic"><img src="images/father.jpg" alt="Alhaji Usamat Aliyu Naali"></div></div>
+      <div>
+        <h2>Alhaji Usamat <b>Aliyu Naali</b></h2>
+        <p><strong>Father of the house · Of the Royal Family of Osana Agbo</strong></p>
+        <p>The family traces his lineage to the Royal Family of Osana Agbo, and he is remembered as connected to the late King of Keana. A retired civil servant, he is the father of six children and the anchor of the family’s traditions and values.</p>
       </div>
-    </section>
-
-    <section class="parent-block" id="parents">
-      <div class="parent-row reveal">
-        <div class="parent-photo">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Alhaji Usamat Aliyu Naali" />
-        </div>
-        <div class="parent-text">
-          <span class="role">Father of the house</span>
-          <h3 class="serif">Alhaji Usamat Aliyu Naali</h3>
-          <p class="honor">Of the Royal Family of Osana Agbo</p>
-          <p>
-            The family traces his lineage to the Royal Family of Osana Agbo, and he is remembered
-            as connected to the late King of Keana. A retired civil servant, he is the father of
-            six children and the anchor of the family’s traditions and values.
-          </p>
-        </div>
+    </div>
+    <div class="row rev reveal" style="margin-top:90px">
+      <div class="media"><div class="blob b-blue" style="width:70%;height:70%;right:2%;top:0"></div>
+        <div class="pic"><img src="images/mother.jpg" alt="Hajiya Hauwa Jibrin Sahara"></div></div>
+      <div>
+        <h2>Hajiya Hauwa <b>Jibrin Sahara</b></h2>
+        <p><strong>Mother of the house · Educated in Jos, Nigeria</strong></p>
+        <p>A civil servant who pursued her studies in Jos, Hauwa Jibrin Sahara is the mother of six children, three sons and three daughters, and wife to Usamat Aliyu Naali.</p>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="parent-row reverse reveal">
-        <div class="parent-photo">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="Hajiya Hauwa Jibrin Sahara" />
-        </div>
-        <div class="parent-text">
-          <span class="role">Mother of the house</span>
-          <h3 class="serif">Hajiya Hauwa Jibrin Sahara</h3>
-          <p class="honor">Educated in Jos, Nigeria</p>
-          <p>
-            A civil servant who pursued her studies in Jos, Hauwa Jibrin Sahara is the mother of
-            six children, three sons and three daughters, and wife to Usamat Aliyu Naali.
-          </p>
-        </div>
-      </div>
-    </section>
+<!-- TREE -->
+<section id="tree">
+  <div class="wrap">
+    <div class="hd reveal">
+      <h2>Six children, <b>one family</b></h2>
+      <p>Presented in the order the family holds it, in the years they were born. Parents: Usamat Aliyu Naali &amp; Hauwa Jibrin Sahara.</p>
+    </div>
+    <div class="cards reveal">
+      <div class="card"><em>First born</em><strong>Fauwaz</strong><div class="n">1</div></div>
+      <div class="card"><em>Second born</em><strong>Irfan</strong><div class="n">2</div></div>
+      <div class="card"><em>Third born</em><strong>Sabirat</strong><div class="n">3</div></div>
+      <div class="card"><em>Fourth born</em><strong>Jibrin</strong><div class="n">4</div></div>
+      <div class="card"><em>Fifth born</em><strong>Rahina</strong><div class="n">5</div></div>
+      <div class="card"><em>Last born</em><strong>Munassat</strong><div class="n">6</div></div>
+    </div>
+  </div>
+</section>
 
-    <section class="tree-section section-pad" id="tree">
-      <div class="wrap">
-        <div class="reveal">
-          <span class="kicker">One family, six children</span>
-          <h2 class="serif">The Naali family line</h2>
-          <p class="lede">
-            Presented in the order the family holds it: Fauwaz, Irfan, Sabirat, Jibrin, Rahina,
-            and Munassat, in the years they were born.
-          </p>
-        </div>
-        <div class="tree reveal">
-          <div class="tree-parents">
-            <span>Usamat Aliyu Naali</span><span class="plus">&amp;</span><span>Hauwa Jibrin Sahara</span>
-          </div>
-          <div class="tree-stem"></div>
-          <div class="tree-children">
-            <div class="tree-child"><span class="pos">First born</span><span class="nm">Fauwaz</span></div>
-            <div class="tree-child"><span class="pos">Second born</span><span class="nm">Irfan</span></div>
-            <div class="tree-child"><span class="pos">Third born</span><span class="nm">Sabirat</span></div>
-            <div class="tree-child"><span class="pos">Fourth born</span><span class="nm">Jibrin</span></div>
-            <div class="tree-child"><span class="pos">Fifth born</span><span class="nm">Rahina</span></div>
-            <div class="tree-child"><span class="pos">Last born</span><span class="nm">Munassat</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- CHILDREN -->
+<section id="children" class="soft">
+  <div class="blob b-green" style="width:280px;height:280px;left:-120px;top:100px;opacity:.45"></div>
+  <div class="wrap">
+    <div class="hd center reveal"><h2>Their names, their schooling, <b>their paths</b></h2></div>
+    <div class="kids">
+      <div class="kid reveal"><div class="pic"><img src="images/child-1.jpg" alt="Fauwaz Usamat Naali"></div><em>First born · First son</em><h3>Fauwaz Usamat Naali</h3>
+        <ul><li>Keana South Primary School</li><li>Federal Science and Technical College, Doma</li><li>Federal University of Lafia, Nasarawa State</li></ul></div>
+      <div class="kid reveal"><div class="pic"><img src="images/child-2.jpg" alt="Irfan Usamat Naali"></div><em>Second born · Second son</em><h3>Irfan Usamat Naali</h3>
+        <ul><li>Keana South Primary School</li><li>Federal Science and Technical College, Doma</li><li>North Bridge College of Science and Technology, Kano State Computer Science</li></ul><div class="work"><b>Director</b> at a travel credit company.</div></div>
+      <div class="kid reveal"><div class="pic"><img src="images/child-3.jpg" alt="Sabirat Usamat Naali"></div><em>Third born</em><h3>Sabirat Usamat Naali</h3>
+        <ul><li>Federal School Keana, primary</li><li>Federal School Keana, secondary</li><li>Federal University of Lafia, Nasarawa State graduate</li></ul></div>
+      <div class="kid reveal"><div class="pic"><img src="images/child-4.jpg" alt="Jibrin Usamat Naali"></div><em>Fourth born</em><h3>Jibrin Usamat Naali</h3>
+        <ul><li>Federal School Keana, primary</li><li>Assasul Islam Keana, secondary</li><li>Federal College of Education Keana, Technical</li></ul><div class="work">Currently a <b>student</b>.</div></div>
+      <div class="kid reveal"><div class="pic"><img src="images/child-5.jpg" alt="Rahina Usamat Naali"></div><em>Fifth born</em><h3>Rahina Usamat Naali</h3>
+        <ul><li>Federal School Keana, primary</li><li>Secondary school, Abuja</li></ul></div>
+      <div class="kid reveal"><div class="pic"><img src="images/child-6.jpg" alt="Munassat Usamat Naali"></div><em>Last born · Last daughter</em><h3>Munassat Usamat Naali</h3>
+        <ul><li>Federal School Keana, primary</li><li>Assasul Islam Keana, secondary</li></ul></div>
+    </div>
+  </div>
+</section>
 
-    <section class="children-section section-pad" id="children">
-      <div class="wrap">
-        <div class="reveal" style="margin-bottom:20px;">
-          <span class="kicker">Six children</span>
-          <h2 class="serif">Their names, their schooling, their paths</h2>
-        </div>
+<!-- VALUES -->
+<section id="values">
+  <div class="wrap">
+    <div class="hd center reveal"><h2>Values <b>and tradition</b></h2><p>What holds the family together.</p></div>
+    <div class="vals reveal">
+      <div class="val"><div class="ring">01</div><h3>Togetherness</h3><p>Central to how the family lives, across eight members and however far each child's path may take them.</p></div>
+      <div class="val"><div class="ring">02</div><h3>Respect for one another</h3><p>Between parents and children, and among the six siblings a value the family names as its own.</p></div>
+      <div class="val"><div class="ring">03</div><h3>The Eid gathering</h3><p>On the fourth day of Eid Mubarak, the family comes together for its general family meeting each year.</p></div>
+      <div class="val"><div class="ring">04</div><h3>A shared home</h3><p>Keana remains the home ground the parents and children return to and carry with them.</p></div>
+    </div>
+  </div>
+</section>
 
-        <div class="child-row reveal">
-          <div class="child-photo">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Fauwaz Usamat Naali" />
-          </div>
-          <div>
-            <span class="child-order">First born · First son</span>
-            <h3 class="child-name serif">Fauwaz Usamat Naali</h3>
-            <div class="child-meta">
-              <h4>Education</h4>
-              <ul>
-                <li>Keana South Primary School</li>
-                <li>Federal Science and Technical College, Doma</li>
-                <li>Federal University of Lafia, Nasarawa State</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<!-- MOMENTS -->
+<section id="moments" class="soft">
+  <div class="wrap">
+    <div class="hd center reveal"><h2>Family <b>moments</b></h2></div>
+    <div class="moments reveal">
+      <img src="images/family-abuja.jpg" alt="The Naali family together in Abuja" loading="lazy">
+    </div>
+  </div>
+</section>
 
-        <div class="child-row alt reveal">
-          <div class="child-photo">
-            <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=700&q=80" alt="Irfan Usamat Naali" />
-          </div>
-          <div>
-            <span class="child-order">Second born · Second son</span>
-            <h3 class="child-name serif">Irfan Usamat Naali</h3>
-            <div class="child-meta">
-              <h4>Education</h4>
-              <ul>
-                <li>Keana South Primary School</li>
-                <li>Federal Science and Technical College, Doma</li>
-                <li>North Bridge College of Science and Technology, Kano State — Computer Science</li>
-              </ul>
-            </div>
-            <div class="child-work"><b>Director</b> at a travel credit company.</div>
-          </div>
-        </div>
+<footer>
+  <div class="wrap fgrid">
+    <div><div class="flogo">Naa<i>l</i>i</div><p style="margin-top:8px">A place of salt and history — the family's home ground, Keana.</p></div>
+    <div><h5>Explore</h5><a href="#heritage">Heritage</a><a href="#parents">Parents</a><a href="#tree">Family tree</a></div>
+    <div><h5>Family</h5><a href="#children">The children</a><a href="#values">Values</a><a href="#moments">Moments</a></div>
+    <div><h5>Keana</h5><p>Keana Local Government Area, Nasarawa State, Nigeria</p><p>The family gathers each year on the fourth day of Eid Mubarak.</p></div>
+  </div>
+  <div class="copy">© 2026 Usamat &amp; Hauwa Naali family. All rights reserved.</div>
+</footer>
 
-        <div class="child-row reveal">
-          <div class="child-photo">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80" alt="Sabirat Usamat Naali" />
-          </div>
-          <div>
-            <span class="child-order">Third born</span>
-            <h3 class="child-name serif">Sabirat Usamat Naali</h3>
-            <div class="child-meta">
-              <h4>Education</h4>
-              <ul>
-                <li>Federal School Keana, primary</li>
-                <li>Federal School Keana, secondary</li>
-                <li>Federal University of Lafia, Nasarawa State — graduate</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="child-row alt reveal">
-          <div class="child-photo">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Jibrin Usamat Naali" />
-          </div>
-          <div>
-            <span class="child-order">Fourth born</span>
-            <h3 class="child-name serif">Jibrin Usamat Naali</h3>
-            <div class="child-meta">
-              <h4>Education</h4>
-              <ul>
-                <li>Federal School Keana, primary</li>
-                <li>Assasul Islam Keana, secondary</li>
-                <li>Federal College of Education Keana, Technical</li>
-              </ul>
-            </div>
-            <div class="child-work">Currently a <b>student</b>.</div>
-          </div>
-        </div>
-
-        <div class="child-row reveal">
-          <div class="child-photo">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=700&q=80" alt="Rahina Usamat Naali" />
-          </div>
-          <div>
-            <span class="child-order">Fifth born</span>
-            <h3 class="child-name serif">Rahina Usamat Naali</h3>
-            <div class="child-meta">
-              <h4>Education</h4>
-              <ul>
-                <li>Federal School Keana, primary</li>
-                <li>Secondary school, Abuja</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="child-row alt reveal">
-          <div class="child-photo">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80" alt="Munassat Usamat Naali" />
-          </div>
-          <div>
-            <span class="child-order">Last born · Last daughter</span>
-            <h3 class="child-name serif">Munassat Usamat Naali</h3>
-            <div class="child-meta">
-              <h4>Education</h4>
-              <ul>
-                <li>Federal School Keana, primary</li>
-                <li>Assasul Islam Keana, secondary</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="values-section section-pad" id="values">
-      <div class="wrap">
-        <div class="reveal">
-          <span class="kicker">What holds the family together</span>
-          <h2 class="serif">Values and tradition</h2>
-        </div>
-        <div class="values-grid reveal">
-          <div class="value-card">
-            <h3 class="serif">Togetherness</h3>
-            <p>
-              The family holds togetherness as central to how they live, across eight members and
-              however far each child's path may take them.
-            </p>
-          </div>
-          <div class="value-card">
-            <h3 class="serif">Respect for one another</h3>
-            <p>
-              Respect between parents and children, and among the six siblings, is a value the
-              family names as its own.
-            </p>
-          </div>
-          <div class="value-card">
-            <h3 class="serif">The Eid gathering</h3>
-            <p>
-              On the fourth day of Eid Mubarak, the family comes together for its general family
-              meeting, a tradition kept each year.
-            </p>
-          </div>
-          <div class="value-card">
-            <h3 class="serif">A shared home</h3>
-            <p>
-              Keana remains the family's home ground, the place its parents and children return to
-              and carry with them.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="children-section section-pad" id="moments" style="padding-top:0;">
-      <div class="wrap">
-        <div class="reveal" style="margin-bottom:36px;">
-          <span class="kicker">Together</span>
-          <h2 class="serif">Family moments</h2>
-        </div>
-        <div class="reveal" style="display:grid; gap:28px;">
-          <div style="overflow:hidden; border-radius:8px;">
-            <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=80"
-              alt="The Naali family together"
-              style="width:100%; object-fit:cover; aspect-ratio:16/10;"
-            />
-          </div>
-          <div style="overflow:hidden; border-radius:8px;">
-            <img
-              src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1400&q=80"
-              alt="The Naali family together"
-              style="width:100%; object-fit:cover; aspect-ratio:16/10;"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="keana section-pad">
-      <div class="wrap">
-        <span class="kicker">Keana, Nasarawa State</span>
-        <h2 class="serif">A place of salt and history</h2>
-        <div class="rule"></div>
-        <p>
-          The family speaks of Keana as blessed with the salt-production heritage of their ancestors,
-          a history that sits underneath everything the Naali family has built since.
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      <div class="wrap">
-        <span class="fname serif">Usamat &amp; Hauwa Naali</span>
-        <span>Keana Local Government Area, Nasarawa State, Nigeria</span>
-        <span class="meeting">The family gathers each year on the fourth day of Eid Mubarak.</span>
-      </div>
-    </footer>
-
-    <script>
-      const nav = document.getElementById('siteNav');
-      const openMenu = document.getElementById('openMenu');
-      const closeMenu = document.getElementById('closeMenu');
-      const mobileMenu = document.getElementById('mobileMenu');
-
-      const setNavState = () => {
-        if (!nav) return;
-        nav.classList.toggle('solid', window.scrollY > 18);
-      };
-
-      setNavState();
-      window.addEventListener('scroll', setNavState, { passive: true });
-
-      const toggleMenu = (shouldOpen) => {
-        if (!mobileMenu || !openMenu) return;
-        mobileMenu.classList.toggle('open', shouldOpen);
-        openMenu.setAttribute('aria-expanded', String(shouldOpen));
-        document.body.style.overflow = shouldOpen ? 'hidden' : '';
-      };
-
-      if (openMenu) openMenu.addEventListener('click', () => toggleMenu(true));
-      if (closeMenu) closeMenu.addEventListener('click', () => toggleMenu(false));
-      mobileMenu?.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => toggleMenu(false));
-      });
-
-      const revealEls = document.querySelectorAll('.reveal');
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-
-      revealEls.forEach((el) => revealObserver.observe(el));
-    </script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
